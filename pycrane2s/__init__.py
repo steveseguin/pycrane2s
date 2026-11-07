@@ -1,2 +1,2 @@
-from .Crane2S import *
+from .main import *
 from .constants import *
