@@ -239,8 +239,8 @@ class Crane2SPresets:
         """Center on (target_x, target_y) in frame dimensions."""
         pan_offset = (target_x / frame_w) * 2 - 1
         tilt_offset = 1 - (target_y / frame_h) * 2
-        await self.gimbal.set_pan_pct(pan_offset, speed_pct)
-        await self.gimbal.set_tilt_pct(tilt_offset, speed_pct)
+        await self.gimbal.pan_pct(pan_offset, speed_pct)
+        await self.gimbal.tilt_pct(tilt_offset, speed_pct)
 
     def save_preset(self, name: str, pan_pct: float, tilt_pct: float):
         """Store a named pan/tilt preset."""
